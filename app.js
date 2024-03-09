@@ -24,8 +24,6 @@ function asignarTextoElemento(elemento, texto) {
 }
 function generarNumeroSecreto() {
     let numAleat = Math.floor(Math.random() * 10) + 1;
-    console.log(numAleat);
-    console.log(listNums);
     if (cantJuegos == listNums.length) {
         asignarTextoElemento('p', 'Felicidades, terminate el juego');
         finJuego();
