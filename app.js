@@ -28,6 +28,7 @@ function generarNumeroSecreto() {
     console.log(listNums);
     if (cantJuegos == listNums.length) {
         asignarTextoElemento('p', 'Felicidades, terminate el juego');
+        finJuego();
     } else {
         if (listNums.includes(numAleat)) {
             return generarNumeroSecreto();
@@ -51,4 +52,7 @@ function reIniciarJuego() {
     valoresIniciales();
     document.getElementById('reiniciar').setAttribute('disabled', 'true');
     document.getElementById('numeroUsuarios').removeAttribute('readonly');
+}
+function finJuego() {
+    document.getElementById('iniciar').setAttribute('disabled', 'true');
 }
